@@ -1,0 +1,24 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/build/${input:executableName}",
+			"args": ["-r", "-f", "10", "-d", "${workspaceFolder}/captured_images"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build-debug" 	// or "build-release"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "executableName",
+            "description": "Enter the name of the executable to debug"
+        }
+    ]
+}

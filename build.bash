@@ -1,7 +1,8 @@
 #! /bin/bash
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 cd ..
-mkdir captured_images
+cp camera-settings.json build/ 
+mkdir -p captured_images
